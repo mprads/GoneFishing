@@ -1,0 +1,81 @@
+[gd_scene load_steps=11 format=3 uid="uid://c415eopt5032o"]
+
+[ext_resource type="PackedScene" uid="uid://ih28ompdjtkl" path="res://assets/cozy_lake.glb" id="1_0wfyh"]
+[ext_resource type="Shader" uid="uid://5failgynrw56" path="res://assets/shaders/outline.gdshader" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://b5ec0hkgwb7pr" path="res://scenes/boat.tscn" id="2_sugp2"]
+[ext_resource type="Material" uid="uid://ctwyosvatjvd3" path="res://assets/materials/water_mat.tres" id="3_tbgi4"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_sugp2"]
+sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
+
+[sub_resource type="Environment" id="Environment_jyhfs"]
+background_mode = 2
+sky = SubResource("Sky_sugp2")
+tonemap_mode = 2
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tbgi4"]
+material = ExtResource("3_tbgi4")
+size = Vector2(400, 400)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0wfyh"]
+render_priority = 0
+shader = ExtResource("1_o5qli")
+shader_parameter/depth_threshold = 0.05
+shader_parameter/reverse_depth_threshold = 0.25
+shader_parameter/normal_threshold = 0.6
+shader_parameter/darken_amount = 0.3
+shader_parameter/lighten_amount = 1.5
+shader_parameter/normal_edge_bias = Vector3(1, 1, 1)
+shader_parameter/light_direction = Vector3(-0.96, -0.18, 0.2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_sgp6g"]
+material = SubResource("ShaderMaterial_0wfyh")
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="Main" type="Node3D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(576, 324)
+render_target_update_mode = 4
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport"]
+environment = SubResource("Environment_jyhfs")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Map" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="Sketchfab_Scene" parent="SubViewportContainer/SubViewport/Map" instance=ExtResource("1_0wfyh")]
+
+[node name="Boat" parent="SubViewportContainer/SubViewport/Map" instance=ExtResource("2_sugp2")]
+transform = Transform3D(0.939693, 0.34202, 0, 1.49502e-08, -4.10753e-08, 1, 0.34202, -0.939693, -4.37114e-08, 0, 27.0482, 0)
+
+[node name="Water" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0374, 14.0348, 0)
+mesh = SubResource("PlaneMesh_tbgi4")
+
+[node name="Camera3D" type="Camera3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(-0.98034, -0.0846417, 0.178239, 0, 0.90332, 0.428967, -0.197315, 0.420533, -0.885561, -38.5973, 85.2701, -185.544)
+
+[node name="PostProcessing" type="MeshInstance3D" parent="SubViewportContainer/SubViewport/Camera3D"]
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_sgp6g")
+skeleton = NodePath("../..")
