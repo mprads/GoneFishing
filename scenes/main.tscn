@@ -16,6 +16,8 @@ sky_material = SubResource("ProceduralSkyMaterial_0wfyh")
 background_mode = 2
 sky = SubResource("Sky_jyhfs")
 tonemap_mode = 2
+fog_enabled = true
+fog_density = 0.0005
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_tbgi4"]
 material = ExtResource("3_tbgi4")

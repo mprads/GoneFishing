@@ -1,7 +1,7 @@
 [gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://ctwyosvatjvd3"]
 
 [ext_resource type="Shader" uid="uid://dgfnsgaxuf5pr" path="res://assets/shaders/water.gdshader" id="1_yorxk"]
-[ext_resource type="Texture2D" uid="uid://1koyi8l7aei4" path="res://assets/textures/clear+sea+water-2048x2048.png" id="2_7tkwx"]
+[ext_resource type="Texture2D" uid="uid://dhtdlhdk3acbl" path="res://assets/textures/clear+sea+water-2048x2048.png" id="2_7tkwx"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_8jwv7"]
 noise_type = 3
@@ -15,7 +15,6 @@ render_priority = 0
 shader = ExtResource("1_yorxk")
 shader_parameter/albedo = Color(0.119936, 0.32367, 0.354284, 1)
 shader_parameter/water_texture1 = ExtResource("2_7tkwx")
-shader_parameter/water_texture2 = ExtResource("2_7tkwx")
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_atghx")
 shader_parameter/scroll_speed1 = Vector2(0.01, 0)
 shader_parameter/scroll_speed2 = Vector2(-0.01, 0)
