@@ -1,0 +1,100 @@
+[gd_scene load_steps=13 format=3 uid="uid://bmw7redkl43ml"]
+
+[ext_resource type="Texture2D" uid="uid://c87fbamskw3th" path="res://assets/textures/texture_05.png" id="1_2venv"]
+[ext_resource type="Texture2D" uid="uid://dv00aip738rrm" path="res://assets/textures/orange_texture_09.png" id="2_paw1w"]
+[ext_resource type="Texture2D" uid="uid://ckycpq6wvndin" path="res://assets/textures/purple_texture_09.png" id="3_j6w7d"]
+[ext_resource type="Texture2D" uid="uid://crdbt6epmwv6d" path="res://assets/textures/green_texture_09.png" id="4_x4b8f"]
+[ext_resource type="PackedScene" uid="uid://3b6j7av2474q" path="res://scenes/player/player.tscn" id="5_tmr53"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x4b8f"]
+sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+ground_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
+
+[sub_resource type="Sky" id="Sky_tmr53"]
+sky_material = SubResource("ProceduralSkyMaterial_x4b8f")
+
+[sub_resource type="Environment" id="Environment_qcd3b"]
+background_mode = 2
+sky = SubResource("Sky_tmr53")
+tonemap_mode = 2
+sdfgi_enabled = true
+fog_enabled = true
+fog_light_color = Color(1, 1, 1, 1)
+fog_density = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_paw1w"]
+albedo_texture = ExtResource("1_2venv")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j6w7d"]
+albedo_texture = ExtResource("2_paw1w")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x4b8f"]
+albedo_texture = ExtResource("3_j6w7d")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmr53"]
+albedo_texture = ExtResource("4_x4b8f")
+uv1_triplanar = true
+
+[node name="TestLevel" type="Node3D"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 2
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(640, 360)
+render_target_update_mode = 4
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="SubViewportContainer/SubViewport"]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport"]
+environment = SubResource("Environment_qcd3b")
+
+[node name="Map" type="Node3D" parent="SubViewportContainer/SubViewport"]
+
+[node name="Floor" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.500004, 0)
+material_override = SubResource("StandardMaterial3D_paw1w")
+use_collision = true
+size = Vector3(100, 1, 100)
+
+[node name="Box" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.499996, -3.1942)
+material_override = SubResource("StandardMaterial3D_j6w7d")
+use_collision = true
+
+[node name="Box2" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58168, 0.499996, -3.1942)
+material_override = SubResource("StandardMaterial3D_j6w7d")
+use_collision = true
+
+[node name="Box3" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Map"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.58168, 1.6, -3.1942)
+material_override = SubResource("StandardMaterial3D_j6w7d")
+use_collision = true
+
+[node name="Box4" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Map"]
+transform = Transform3D(0.477803, 0, 0.878467, 0, 1, 0, -0.878467, 0, 0.477803, 4.19621, 0.999996, -3.1942)
+material_override = SubResource("StandardMaterial3D_x4b8f")
+use_collision = true
+size = Vector3(2, 2, 2)
+
+[node name="Box5" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Map"]
+transform = Transform3D(0.736829, 0, -0.676079, 0, 1, 0, 0.676079, 0, 0.736829, 4.19621, 1.5, 1.42117)
+material_override = SubResource("StandardMaterial3D_tmr53")
+use_collision = true
+size = Vector3(3, 3, 3)
+
+[node name="Player" parent="SubViewportContainer/SubViewport/Map" instance=ExtResource("5_tmr53")]
+transform = Transform3D(0.142473, 0, -0.989799, 0, 1, 0, 0.989799, 0, 0.142473, -5.84968, 0.0325355, 0)
