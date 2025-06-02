@@ -20,6 +20,8 @@ tonemap_mode = 2
 [sub_resource type="PlaneMesh" id="PlaneMesh_tbgi4"]
 material = ExtResource("3_tbgi4")
 size = Vector2(400, 400)
+subdivide_width = 16
+subdivide_depth = 16
 
 [node name="Main" type="Node3D"]
 
@@ -31,11 +33,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
-stretch_shrink = 2
+stretch_shrink = 3
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 handle_input_locally = false
-size = Vector2i(576, 324)
+size = Vector2i(426, 240)
 render_target_update_mode = 4
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="SubViewportContainer/SubViewport"]
@@ -57,9 +59,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0374, 14.0348, 0)
 mesh = SubResource("PlaneMesh_tbgi4")
 
 [node name="Player" parent="SubViewportContainer/SubViewport/Map" instance=ExtResource("4_tbgi4")]
-transform = Transform3D(-0.459084, 0, -0.888393, 0, 1, 0, 0.888393, 0, -0.459084, -179.651, 42.6986, -71.8176)
+transform = Transform3D(-0.459084, 0, -0.888393, 0, 1, 0, 0.888393, 0, -0.459084, -29.823, 23.1541, -32.3458)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="SubViewportContainer/SubViewport/Map"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -176.455, 35.3747, -67.9449)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6519, 15.8302, -30.9482)
 use_collision = true
 size = Vector3(10, 10, 10)

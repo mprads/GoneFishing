@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://bmw7redkl43ml"]
+[gd_scene load_steps=15 format=3 uid="uid://bmw7redkl43ml"]
 
 [ext_resource type="Texture2D" uid="uid://c87fbamskw3th" path="res://assets/textures/texture_05.png" id="1_2venv"]
 [ext_resource type="Texture2D" uid="uid://dv00aip738rrm" path="res://assets/textures/orange_texture_09.png" id="2_paw1w"]
 [ext_resource type="Texture2D" uid="uid://ckycpq6wvndin" path="res://assets/textures/purple_texture_09.png" id="3_j6w7d"]
 [ext_resource type="Texture2D" uid="uid://crdbt6epmwv6d" path="res://assets/textures/green_texture_09.png" id="4_x4b8f"]
+[ext_resource type="Shader" uid="uid://dvdl7cfwrf3a0" path="res://assets/shaders/toon_lighting.gdshader" id="5_qcd3b"]
 [ext_resource type="PackedScene" uid="uid://3b6j7av2474q" path="res://scenes/player/player.tscn" id="5_tmr53"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_x4b8f"]
@@ -36,6 +37,25 @@ uv1_triplanar = true
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tmr53"]
 albedo_texture = ExtResource("4_x4b8f")
 uv1_triplanar = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_88ety"]
+render_priority = 0
+shader = ExtResource("5_qcd3b")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/clamp_diffuse_to_max = false
+shader_parameter/cuts = 3
+shader_parameter/wrap = 0.0
+shader_parameter/steepness = 1.0
+shader_parameter/use_attenuation = true
+shader_parameter/use_specular = true
+shader_parameter/specular_strength = 1.0
+shader_parameter/specular_shininess = 16.0
+shader_parameter/use_rim = true
+shader_parameter/rim_width = 8.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/use_ramp = false
+shader_parameter/use_borders = false
+shader_parameter/border_width = 0.01
 
 [node name="TestLevel" type="Node3D"]
 
@@ -95,6 +115,7 @@ transform = Transform3D(0.736829, 0, -0.676079, 0, 1, 0, 0.676079, 0, 0.736829, 
 material_override = SubResource("StandardMaterial3D_tmr53")
 use_collision = true
 size = Vector3(3, 3, 3)
+material = SubResource("ShaderMaterial_88ety")
 
 [node name="Player" parent="SubViewportContainer/SubViewport/Map" instance=ExtResource("5_tmr53")]
 transform = Transform3D(0.142473, 0, -0.989799, 0, 1, 0, 0.989799, 0, 0.142473, -5.84968, 0.0325355, 0)
