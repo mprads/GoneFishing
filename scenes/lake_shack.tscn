@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx0hph5mw7rjo"]
+
+[ext_resource type="PackedScene" uid="uid://butsqlfn4aj7w" path="res://assets/environment/temp/low_poly_lake_scene.glb" id="1_fx4l1"]
+
+[node name="LakeShack" instance=ExtResource("1_fx4l1")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)

@@ -1,0 +1,78 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://butsqlfn4aj7w"
+path="res://.godot/imported/low_poly_lake_scene.glb-bc4bfa0749d8be5429a1d22b4aa7cda1.scn"
+
+[deps]
+
+source_file="res://assets/environment/temp/low_poly_lake_scene.glb"
+dest_files=["res://.godot/imported/low_poly_lake_scene.glb-bc4bfa0749d8be5429a1d22b4aa7cda1.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"nodes": {
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/Cube_002/Cube_002_Dock_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/Ducks": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/Fish": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/LAND/LAND_Material_002_0": {
+"generate/physics": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/Rope": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/SeaGrass": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/Sun": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/Sun_002": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/Sun_003": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/WATER": {
+"import/skip_import": true
+},
+"PATH:Sketchfab_model/LP Lake Scene_fbx/RootNode/WATER/WATER_Water_001_0": {
+"import/skip_import": true
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=1

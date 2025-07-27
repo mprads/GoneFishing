@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=3 uid="uid://bqd6msbgiwubs"]
+
+[ext_resource type="PackedScene" uid="uid://cx0hph5mw7rjo" path="res://scenes/lake_shack.tscn" id="1_31850"]
+[ext_resource type="PackedScene" uid="uid://3b6j7av2474q" path="res://scenes/player/player.tscn" id="2_fkw7t"]
+[ext_resource type="Shader" uid="uid://dgfnsgaxuf5pr" path="res://assets/shaders/water.gdshader" id="3_m1x1k"]
+[ext_resource type="Texture2D" uid="uid://dhtdlhdk3acbl" path="res://assets/textures/clear+sea+water-2048x2048.png" id="4_c4c3i"]
+[ext_resource type="PackedScene" uid="uid://b5ec0hkgwb7pr" path="res://scenes/objects/row_boat.tscn" id="5_c4c3i"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8jwv7"]
+noise_type = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_atghx"]
+noise = SubResource("FastNoiseLite_8jwv7")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6x3es"]
+render_priority = 0
+shader = ExtResource("3_m1x1k")
+shader_parameter/albedo = Color(0.119936, 0.32367, 0.354284, 1)
+shader_parameter/water_texture1 = ExtResource("4_c4c3i")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_atghx")
+shader_parameter/scroll_speed1 = Vector2(0.01, 0)
+shader_parameter/scroll_speed2 = Vector2(-0.01, 0)
+shader_parameter/blend_factor = 0.5
+shader_parameter/scale1 = Vector2(1, 1)
+shader_parameter/scale2 = Vector2(1, 1)
+shader_parameter/wave_strength = 0.5
+shader_parameter/wave_scale = 0.02
+shader_parameter/pixelation_level = 256
+shader_parameter/FoamSize = 0.5
+shader_parameter/WaterOpacity = 0.8
+shader_parameter/FoamGlowIntensity = 0.5
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_14mne"]
+material = SubResource("ShaderMaterial_6x3es")
+size = Vector2(60, 60)
+subdivide_width = 16
+subdivide_depth = 16
+
+[node name="Lake" type="Node3D"]
+
+[node name="LakeShack" parent="." instance=ExtResource("1_31850")]
+
+[node name="Player" parent="." instance=ExtResource("2_fkw7t")]
+transform = Transform3D(-0.9998151, 0, 0.019232363, 0, 1, 0, -0.019232363, 0, -0.9998151, -1.0063663, 5.7386346, 1.9257956)
+
+[node name="Water" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.009, 1.5, 7.124)
+mesh = SubResource("PlaneMesh_14mne")
+
+[node name="Boat" parent="." instance=ExtResource("5_c4c3i")]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 4.631708, 2.1960292, 6.4497747)
