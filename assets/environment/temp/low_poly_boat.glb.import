@@ -39,6 +39,9 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
+"PATH:Sketchfab_model/root/GLTF_SceneRootNode/Cube_001_2/Object_9": {
+"generate/physics": true
+},
 "PATH:Sketchfab_model/root/GLTF_SceneRootNode/boat_0/Object_4": {
 "generate/physics": true
 }

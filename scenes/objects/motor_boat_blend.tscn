@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://c68a7qjmob0o2"]
+
+[ext_resource type="PackedScene" uid="uid://bmf104hhptjaf" path="res://assets/environment/temp/low_poly_boat.glb" id="1_3obcm"]
+
+[node name="MotorBoatBlend" instance=ExtResource("1_3obcm")]

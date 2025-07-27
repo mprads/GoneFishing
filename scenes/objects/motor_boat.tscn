@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjj08hjxqnmlo"]
+
+[ext_resource type="Script" uid="uid://d3b6x0lgk77pp" path="res://scenes/objects/RowBoat.cs" id="1_f54ag"]
+[ext_resource type="PackedScene" uid="uid://c68a7qjmob0o2" path="res://scenes/objects/motor_boat_blend.tscn" id="2_f54ag"]
+
+[node name="MotorBoat" type="RigidBody3D"]
+transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_f54ag")
+
+[node name="MotorBoatBlend" parent="." instance=ExtResource("2_f54ag")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="ProbeContainer" type="Node3D" parent="."]
+
+[node name="Marker3D" type="Marker3D" parent="ProbeContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.047, 0, 0)
+
+[node name="Marker3D5" type="Marker3D" parent="ProbeContainer"]
+transform = Transform3D(0.98399407, 0.17820115, 0, -0.17820115, 0.98399407, 0, 0, 0, 1, 1.855, 0, -3.9803157)
+
+[node name="Marker3D6" type="Marker3D" parent="ProbeContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.327301, 0, 3.886)
+
+[node name="Marker3D2" type="Marker3D" parent="ProbeContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.975, 0, 0)
+
+[node name="Marker3D3" type="Marker3D" parent="ProbeContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.601, 0, 3.4417129)
+
+[node name="Marker3D4" type="Marker3D" parent="ProbeContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9620242, 0, -3.933)
