@@ -2,23 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jumdpg2akm4u"
-path="res://.godot/imported/free_low_poly_fish_pack_1.png-ef1727cf7a11620b2bf576f7e2300cf9.ctex"
+uid="uid://3qmqglru3kg5"
+path.s3tc="res://.godot/imported/mushroom_creature_0.png-3a4c6d56a0844c6a92e2a3f7ab3834c9.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 generator_parameters={
-"md5": "34980950a9f8097ea3831ad552d61e96"
+"md5": "11884d018ec5d6113ac4c8932a539927"
 }
 
 [deps]
 
-source_file="res://assets/character_models/free_low_poly_fish_pack_1.png"
-dest_files=["res://.godot/imported/free_low_poly_fish_pack_1.png-ef1727cf7a11620b2bf576f7e2300cf9.ctex"]
+source_file="res://assets/character_models/temp/mushroom_creature_0.png"
+dest_files=["res://.godot/imported/mushroom_creature_0.png-3a4c6d56a0844c6a92e2a3f7ab3834c9.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
@@ -34,4 +35,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

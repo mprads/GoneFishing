@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://txajxb7cyfgc"
-path="res://.godot/imported/mushroom_warrior.glb-61216e4b7261502668a2153ddf06f217.scn"
+uid="uid://bqpcpnkw2pu4m"
+path="res://.godot/imported/frog.glb-e246cb1b5a0bc2f773888b491850a52b.scn"
 
 [deps]
 
-source_file="res://assets/character_models/mushroom_warrior.glb"
-dest_files=["res://.godot/imported/mushroom_warrior.glb-61216e4b7261502668a2153ddf06f217.scn"]
+source_file="res://assets/character_models/frog.glb"
+dest_files=["res://.godot/imported/frog.glb-e246cb1b5a0bc2f773888b491850a52b.scn"]
 
 [params]
 

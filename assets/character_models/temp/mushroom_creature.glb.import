@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b8fekai1bsb5d"
-path="res://.godot/imported/free_low_poly_fish_pack.glb-944c286e20d924047654582979621fb6.scn"
+uid="uid://cwpq173cjyk60"
+path="res://.godot/imported/mushroom_creature.glb-a800cc90dab551c271ce6f03a9ed4380.scn"
 
 [deps]
 
-source_file="res://assets/character_models/free_low_poly_fish_pack.glb"
-dest_files=["res://.godot/imported/free_low_poly_fish_pack.glb-944c286e20d924047654582979621fb6.scn"]
+source_file="res://assets/character_models/temp/mushroom_creature.glb"
+dest_files=["res://.godot/imported/mushroom_creature.glb-a800cc90dab551c271ce6f03a9ed4380.scn"]
 
 [params]
 

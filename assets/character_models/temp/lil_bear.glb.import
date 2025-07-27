@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ceiaih8kvhq3e"
-path="res://.godot/imported/lil_bear.glb-4db7b4bdab471df51d04f216aade8168.scn"
+path="res://.godot/imported/lil_bear.glb-9d52c78ea9f9e9e591365c8834eba89c.scn"
 
 [deps]
 
-source_file="res://assets/character_models/lil_bear.glb"
-dest_files=["res://.godot/imported/lil_bear.glb-4db7b4bdab471df51d04f216aade8168.scn"]
+source_file="res://assets/character_models/temp/lil_bear.glb"
+dest_files=["res://.godot/imported/lil_bear.glb-9d52c78ea9f9e9e591365c8834eba89c.scn"]
 
 [params]
 

@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqhgodtn3i6rd"
-path.s3tc="res://.godot/imported/free_low_poly_fish_pack_4.png-f98d30108a4344451c9f89150de563a9.s3tc.ctex"
+uid="uid://r3070i5jodqj"
+path.s3tc="res://.godot/imported/free_low_poly_fish_pack_3.png-fec266416f713b072e6758dfafdf135e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "7be2505f532b85ad4f8ce0ef5ceb732c"
+"md5": "bc6e4d126207365305ff6c63993f027d"
 }
 
 [deps]
 
-source_file="res://assets/character_models/free_low_poly_fish_pack_4.png"
-dest_files=["res://.godot/imported/free_low_poly_fish_pack_4.png-f98d30108a4344451c9f89150de563a9.s3tc.ctex"]
+source_file="res://assets/character_models/temp/free_low_poly_fish_pack_3.png"
+dest_files=["res://.godot/imported/free_low_poly_fish_pack_3.png-fec266416f713b072e6758dfafdf135e.s3tc.ctex"]
 
 [params]
 

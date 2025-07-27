@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3qmqglru3kg5"
-path.s3tc="res://.godot/imported/mushroom_creature_0.png-41880cf16a891f6552bbc4c0d60a518c.s3tc.ctex"
+uid="uid://bw7oj4fie3a4u"
+path.s3tc="res://.godot/imported/lil_bear_1.png-0b3ad8400d41ffcfbec48346b22f1d05.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "11884d018ec5d6113ac4c8932a539927"
+"md5": "4380c5ea5f29bff784650483279f53b4"
 }
 
 [deps]
 
-source_file="res://assets/character_models/mushroom_creature_0.png"
-dest_files=["res://.godot/imported/mushroom_creature_0.png-41880cf16a891f6552bbc4c0d60a518c.s3tc.ctex"]
+source_file="res://assets/character_models/temp/lil_bear_1.png"
+dest_files=["res://.godot/imported/lil_bear_1.png-0b3ad8400d41ffcfbec48346b22f1d05.s3tc.ctex"]
 
 [params]
 
