@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bq37dg4wb8oex"
-path="res://.godot/imported/cat.glb-99f39174432a7a26f8c54f9b8491a461.scn"
+uid="uid://buct3k2dkjs87"
+path="res://.godot/imported/fishing_rod.glb-f9d4a43f71e6c89e86dfe5fd95c75afc.scn"
 
 [deps]
 
-source_file="res://assets/character_models/cat.glb"
-dest_files=["res://.godot/imported/cat.glb-99f39174432a7a26f8c54f9b8491a461.scn"]
+source_file="res://assets/objects/fishing_rod.glb"
+dest_files=["res://.godot/imported/fishing_rod.glb-f9d4a43f71e6c89e86dfe5fd95c75afc.scn"]
 
 [params]
 
@@ -37,12 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:Ref": {
-"import/skip_import": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

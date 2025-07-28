@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpheg7ty8m5lq"]
+
+[ext_resource type="PackedScene" uid="uid://cqhgpp8h523ew" path="res://assets/objects/Fishing Pole.glb" id="1_x53r0"]
+
+[node name="FishingRod" type="Node3D"]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, 0, 0)
+
+[node name="Fishing Pole" parent="." instance=ExtResource("1_x53r0")]
+transform = Transform3D(-8.742278e-08, -2, 0, 2, -8.742278e-08, 0, 0, 0, 2, 210.29094, -172.94662, -30.79654)
+
+[editable path="Fishing Pole"]

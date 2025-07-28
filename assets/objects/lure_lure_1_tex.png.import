@@ -2,26 +2,28 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1473im1xvtjt"
-path.s3tc="res://.godot/imported/catglb_CatColour.png-cf0d72c18f160daa437f66e2f2ad443a.s3tc.ctex"
+uid="uid://im06r37kit0h"
+path.s3tc="res://.godot/imported/lure_lure_1_tex.png-3cce9491f7ad1e2a376567d9d532e4ad.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "75cc5e0a15dcdd06ea0ffb080a8cc05a"
+"md5": "21803b4185794a84e3f709b3bd533a3d"
 }
 
 [deps]
 
-source_file="res://assets/character_models/catglb_CatColour.png"
-dest_files=["res://.godot/imported/catglb_CatColour.png-cf0d72c18f160daa437f66e2f2ad443a.s3tc.ctex"]
+source_file="res://assets/objects/lure_lure_1_tex.png"
+dest_files=["res://.godot/imported/lure_lure_1_tex.png-3cce9491f7ad1e2a376567d9d532e4ad.s3tc.ctex"]
 
 [params]
 
 compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -29,6 +31,10 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

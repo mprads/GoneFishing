@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bq37dg4wb8oex"
-path="res://.godot/imported/cat.glb-99f39174432a7a26f8c54f9b8491a461.scn"
+uid="uid://cqhgpp8h523ew"
+path="res://.godot/imported/Fishing Pole.glb-ba98571bead26649002e99a701f17cc3.scn"
 
 [deps]
 
-source_file="res://assets/character_models/cat.glb"
-dest_files=["res://.godot/imported/cat.glb-99f39174432a7a26f8c54f9b8491a461.scn"]
+source_file="res://assets/objects/Fishing Pole.glb"
+dest_files=["res://.godot/imported/Fishing Pole.glb-ba98571bead26649002e99a701f17cc3.scn"]
 
 [params]
 
@@ -37,12 +37,6 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={
-"nodes": {
-"PATH:Ref": {
-"import/skip_import": true
-}
-}
-}
+_subresources={}
 gltf/naming_version=2
 gltf/embedded_image_handling=1

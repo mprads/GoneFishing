@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2y504op115ed"]
+
+[ext_resource type="PackedScene" uid="uid://bq37dg4wb8oex" path="res://assets/character_models/cat.glb" id="1_fsmvy"]
+[ext_resource type="PackedScene" uid="uid://dpheg7ty8m5lq" path="res://scenes/player/fishing_rod.tscn" id="2_ncdmf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fsmvy"]
+
+[node name="CatSkin" instance=ExtResource("1_fsmvy")]
+
+[node name="Rig" type="Node3D" parent="." index="0"]
+
+[node name="Skeleton3D" type="Skeleton3D" parent="Rig" index="0"]
+
+[node name="Head" parent="." index="1"]
+material_override = SubResource("StandardMaterial3D_fsmvy")
+
+[node name="RightHandSlot" type="BoneAttachment3D" parent="ArmRight" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2992514, -0.85716176, -0.024511546)
+
+[node name="FishingRod" parent="ArmRight/RightHandSlot" index="0" instance=ExtResource("2_ncdmf")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0.09125793, 0.049785256, 0.07001755)

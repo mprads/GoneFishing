@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjj08hjxqnmlo"]
 
 [ext_resource type="Script" uid="uid://d3b6x0lgk77pp" path="res://scenes/objects/RowBoat.cs" id="1_f54ag"]
-[ext_resource type="PackedScene" uid="uid://c68a7qjmob0o2" path="res://scenes/objects/motor_boat_blend.tscn" id="2_f54ag"]
+[ext_resource type="PackedScene" uid="uid://c68a7qjmob0o2" path="res://assets/objects/motor_boat_blend.tscn" id="2_f54ag"]
 
 [node name="MotorBoat" type="RigidBody3D"]
 transform = Transform3D(1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0, 1, 0, 0, 0)
